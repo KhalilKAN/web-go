@@ -1,6 +1,9 @@
 pipeline {
     agent { label 'tuto' }
     
+    enviroment{
+        DOCKERHUB_CREDS = credentials('credential')
+    }
 
     stages {
         stage('Build') {
